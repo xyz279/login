@@ -1,0 +1,6 @@
+{
+  "short_name": "Login app",
+  "name": "Simple login app on React and Firebase",
+  "start_url": ".",
+  "display": "standalone"
+}
