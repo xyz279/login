@@ -38,22 +38,22 @@ class Home extends Component {
                         <div className="user-avatar" src="http://placehold.it/64x64" />
                     </div>
                     {this.props.uid && this.readUserData(this.props.uid)}
-                    <p>
+                    <div>
                         {this.state.firstname ? <b>First Name:</b> : <div className="text-placeholder" style={{ width: "87px" }}></div>}
                         {this.state.firstname ? this.state.firstname : <div className="text-placeholder" style={{ width: "125px" }}></div>}
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         {this.state.lastname ? <b>Last Name:</b> : <div className="text-placeholder" style={{ width: "80px" }}></div>}
                         {this.state.lastname ? this.state.lastname : <div className="text-placeholder" style={{ width: "140px" }}></div>}
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         {this.state.firstname ? <b>Email:</b> : <div className="text-placeholder" style={{ width: "44px" }}></div>}
                         {this.state.firstname ? this.props.email : <div className="text-placeholder" style={{ width: "133px" }}></div>}
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         {this.state.firstname ? <b>Registered:</b> : <div className="text-placeholder" style={{ width: "44px" }}></div>}
                         {this.state.firstname ? this.props.creationTime : <div className="text-placeholder" style={{ width: "214px" }}></div>}
-                    </p>
+                    </div>
                     <div className="logout-btn-wrapper">
                         <button className="btn btn-secondary" onClick={this.logout}>Logout</button>
                     </div>

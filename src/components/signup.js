@@ -83,13 +83,12 @@ class Signup extends Component {
 
     checkString(string) {
         if (string) {
+            var format = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*/g;
 
-            var format = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
-
-            if (string.match(format)) {
-                return true;
-            } else {
+            if (format.test(string)) {
                 return false;
+            } else {
+                return true;
             }
         } else {
             return true;

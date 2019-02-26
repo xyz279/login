@@ -51,6 +51,7 @@ class Login extends Component {
 
             .catch((error) => {
                 this.setState({ wait: false });
+                console.log(error.code);
 
                 if (error.code === 'auth/invalid-email') {
                     this.setState({ emailError: true, error: 'Invalid email' });
@@ -58,6 +59,10 @@ class Login extends Component {
 
                 if (error.code === 'auth/wrong-password') {
                     this.setState({ passwordError: true, error: 'Wrong password' })
+                }
+
+                if (error.code === 'auth/user-not-found') {
+                    this.setState({ emailError: true, error: 'User not found' })
                 }
             });
     }

@@ -54,7 +54,7 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div>
-                <Redirect to="/login" />
+                { window.location.pathname != '/login' && <Redirect to="/login" /> }
                     { this.state.user && <Route path="/login" render={(props) => <Home {...props} uid={this.state.data.uid} email={this.state.data.email} creationTime={this.state.data.creationTime} />} />}
                     {!this.state.user && <Route path="/login" render={(props) => <Login {...props} wait={wait} />} />}
                     {!this.state.user && <Route path="/signup" component={Signup} />}
